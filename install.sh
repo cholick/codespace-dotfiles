@@ -5,3 +5,4 @@ git config --global push.default simple
 git config --global push.autoSetupRemote true
 
 export FEATURE_DAEMONIZE_SCRIPT_SERVER=true
+export SERVICEOWNERS_SKIP=1
