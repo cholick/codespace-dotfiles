@@ -1,0 +1,31 @@
+<application>
+    <component name="CodeVisionSettings">
+        <option name="codeVisionGroupToPosition">
+            <map>
+                <entry key="inheritors" value="Default" />
+                <entry key="references" value="Default" />
+                <entry key="vcs.code.vision" value="Default" />
+            </map>
+        </option>
+        <option name="defaultPosition" value="Right" />
+    </component>
+    <component name="DeclarativeInlayHintsSettings">
+        <option name="providerIdToEnabled">
+            <map>
+                <entry key="js.chain.hints" value="true" />
+                <entry key="js.type.hints" value="true" />
+                <entry key="ts.chain.hints" value="true" />
+                <entry key="ts.enum.hints" value="true" />
+                <entry key="ts.type.hints" value="true" />
+            </map>
+        </option>
+    </component>
+    <component name="InlayHintsSettings">
+        <option name="disabledHintProviderIds">
+            <set>
+                <option value="go.go.inlays.display.constant.definition" />
+            </set>
+        </option>
+        <option name="lastViewedProviderKeyId" value="" />
+    </component>
+</application>
