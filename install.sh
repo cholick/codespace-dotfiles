@@ -8,6 +8,7 @@ export FEATURE_DAEMONIZE_SCRIPT_SERVER=true
 export DX_TELEMETRY_OPT_OUT=true
 export SERVICEOWNERS_SKIP=1
 export RUBOCOP_SKIP=1
+export HISTFILE=/workspaces/.codespaces/.persistedshare
 
 # Gateway setting sync doesn't work yet
 mkdir -p /home/codespace/.config/JetBrains/RemoteDev-GO/_workspaces_hubber-codespace/options
