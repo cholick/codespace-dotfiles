@@ -3,7 +3,7 @@ export HISTFILE=/workspaces/.codespaces/.persistedshare/.bash_history
 export HISTSIZE=-1
 export HISTFILESIZE=-1
 export HISTCONTROL=ignoreboth
-export PROMPT_COMMAND="history -a && $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a"
 
 
 export FEATURE_DAEMONIZE_SCRIPT_SERVER=true
