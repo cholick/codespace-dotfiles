@@ -4,7 +4,7 @@ git config --global init.defaultBranch main
 git config --global push.default simple
 git config --global push.autoSetupRemote true
 
-echo "source './workspaces/.codespaces/.persistedshare/dotfiles/.bashrc' >> ~/.bashrc"
+echo "source './workspaces/.codespaces/.persistedshare/dotfiles/.bashrc'" >> ~/.bashrc
 
 export FEATURE_DAEMONIZE_SCRIPT_SERVER=true
 export DX_TELEMETRY_OPT_OUT=true
