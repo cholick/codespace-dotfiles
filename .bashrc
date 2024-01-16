@@ -13,7 +13,7 @@ export DX_TELEMETRY_OPT_OUT=true
 export SERVICEOWNERS_SKIP=1
 export RUBOCOP_SKIP=1
 export HCS_CLI_VERBOSE=1
-export GITHUB_TOKEN=$MY_PAT
+#export GITHUB_TOKEN=$MY_PAT
 
 killport() {
 	if [ -z $1 ]; then
