@@ -1,11 +1,11 @@
 # General
 # See https://github.com/github/codespaces/issues/2851
 export HISTFILE=/workspaces/.codespaces/.persistedshare/.bash_history
+# Write history each command due to Codespace sometimes not flushing
+export PROMPT_COMMAND="history -a"
 export HISTSIZE=-1
 export HISTFILESIZE=-1
 export HISTCONTROL=ignoreboth
-# Write history each command due to Codespace sometimes not flushing
-export PROMPT_COMMAND="history -a"
 
 # Work specific
 export FEATURE_DAEMONIZE_SCRIPT_SERVER=true
