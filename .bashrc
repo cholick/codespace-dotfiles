@@ -10,6 +10,7 @@ export HISTCONTROL=ignoreboth
 # Work specific
 export FEATURE_DAEMONIZE_SCRIPT_SERVER=true
 export DX_TELEMETRY_OPT_OUT=true
+export TMP_USE_SYNCED_UI_MANIFEST=true
 # export DX_EDGE=true
 
 export SERVICEOWNERS_SKIP=1
