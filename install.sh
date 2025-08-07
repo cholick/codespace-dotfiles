@@ -6,15 +6,23 @@ git config --global push.autoSetupRemote true
 git config --global commit.gpgsign false
 
 # Leave what's in place there but append customizations
-
 echo "source '/workspaces/.codespaces/.persistedshare/dotfiles/.bashrc'" >> ~/.bashrc
 
+# Add remote settings for things that can't be set locally
 remote_settings_file="/home/vscode/.vscode-remote/data/Machine/settings.json"
-yolo_json=$(cat <<'EOF'
-	"chat.tools.terminal.autoApprove": {
-		"/.*/": true
-	},
-EOF
-)
-
-sed -i "0,/{/{s/{/{\n$yolo_json/}" "$remote_settings_file"
+json_setting='
+    "chat.tools.terminal.autoApprove": {
+        "/.*/": true
+    },
+'
+if [ -f "$remote_settings_file" ]; then
+    content=$(cat "$remote_settings_file")
+    first_brace_line=$(printf '%s\n' "$content" | grep -n -m1 '{' | cut -d: -f1)
+    if [ -n "$first_brace_line" ]; then
+        tmp="$remote_settings_file.tmp"
+        printf '%s\n' "{" > "$tmp"
+        printf '%s\n' "$json_setting" >> "$tmp"
+        printf '%s\n' "$content" | tail -n +$((first_brace_line + 1)) >> "$tmp"
+        mv "$tmp" "$remote_settings_file"
+    fi
+fi
