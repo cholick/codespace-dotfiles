@@ -14,6 +14,7 @@ json_setting='
     "chat.tools.terminal.autoApprove": {
         "/.*/": true
     },
+    "chat.tools.global.autoApprove": true,
 '
 if [ -f "$remote_settings_file" ]; then
     content=$(cat "$remote_settings_file")
