@@ -7,6 +7,8 @@ export HISTSIZE=-1
 export HISTFILESIZE=-1
 export HISTCONTROL=ignoreboth
 
+alias pbcopy='printf "\033]52;c;$(base64 | tr -d "\n")\a"'
+
 # Work specific
 export FEATURE_DAEMONIZE_SCRIPT_SERVER=true
 export DX_TELEMETRY_OPT_OUT=true
