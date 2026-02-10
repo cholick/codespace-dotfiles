@@ -8,6 +8,12 @@ git config --global commit.gpgsign false
 # Leave what's in place there but append customizations
 echo "source '/workspaces/.codespaces/.persistedshare/dotfiles/.bashrc'" >> ~/.bashrc
 
+# You'd think I could just provide text, but github.copilot.chat.codeGeneration.instructions is deprecated
+# Works together with setting:
+#   "chat.instructionsFilesLocations": {"~/.github/copilot-instructions": true},
+mkdir -p ~/.github/copilot-instructions
+cp /workspaces/.codespaces/.persistedshare/dotfiles/*.instructions.md ~/.github/copilot-instructions/ 2>/dev/null
+
 # Add remote settings for things that can't be set locally
 remote_settings_file="/home/vscode/.vscode-remote/data/Machine/settings.json"
 json_setting='
