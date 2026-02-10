@@ -8,10 +8,6 @@ git config --global commit.gpgsign false
 # Leave what's in place there but append customizations
 echo "source '/workspaces/.codespaces/.persistedshare/dotfiles/.bashrc'" >> ~/.bashrc
 
-# I thought there was a setting for this, but I can't find it
-mkdir -p ~/.github
-cp /workspaces/.codespaces/.persistedshare/dotfiles/copilot-instructions.md ~/.github/copilot-instructions.md
-
 # Add remote settings for things that can't be set locally
 remote_settings_file="/home/vscode/.vscode-remote/data/Machine/settings.json"
 json_setting='
