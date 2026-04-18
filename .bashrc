@@ -7,6 +7,13 @@ if [ "${CODESPACES:-}" = "true" ]; then
 	export HISTSIZE=-1
 	export HISTFILESIZE=-1
 	export HISTCONTROL=ignoreboth
+else
+	# Feels like I shouldn't have to do this and it should "just work", but couldn't find something cleaner
+	export GH_TOKEN="$(
+	  printf 'protocol=https\nhost=github.com\n\n' |
+	    GIT_TERMINAL_PROMPT=0 git credential fill 2>/dev/null |
+	    awk -F= '/^password=/{print $2; exit}'
+	)"
 fi
 
 # Pipe into pbopcy on Codespace and have available on local mac
