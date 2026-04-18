@@ -8,7 +8,7 @@ if [ "${CODESPACES:-}" = "true" ]; then
 	export HISTFILESIZE=-1
 	export HISTCONTROL=ignoreboth
 else
-	# Feels like I shouldn't have to do this and it should "just work", but couldn't find something cleaner
+	# Feels like I shouldn't have to do this and it should "just work", but couldn't find something cleaner to get the gh cli auth'd
 	export GH_TOKEN="$(
 	  printf 'protocol=https\nhost=github.com\n\n' |
 	    GIT_TERMINAL_PROMPT=0 git credential fill 2>/dev/null |
