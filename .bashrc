@@ -1,11 +1,13 @@
 # General
 # See https://github.com/github/codespaces/issues/2851
-export HISTFILE=/workspaces/.codespaces/.persistedshare/.bash_history
-# Write history each command due to Codespace sometimes not flushing
-export PROMPT_COMMAND="history -a"
-export HISTSIZE=-1
-export HISTFILESIZE=-1
-export HISTCONTROL=ignoreboth
+if [ "${CODESPACES:-}" = "true" ]; then
+	export HISTFILE=/workspaces/.codespaces/.persistedshare/.bash_history
+	# Write history each command due to Codespace sometimes not flushing
+	export PROMPT_COMMAND="history -a"
+	export HISTSIZE=-1
+	export HISTFILESIZE=-1
+	export HISTCONTROL=ignoreboth
+fi
 
 # Pipe into pbopcy on Codespace and have available on local mac
 alias pbcopy='printf "\033]52;c;$(base64 | tr -d "\n")\a"'
