@@ -1,6 +1,9 @@
 ---
 applyTo: "**"
 ---
+
+Always use a direct, neutral tone. Avoid marketing clichés or buzzwords like "game changer" or "dealbreaker". Omit empathetic statements or conversational filler. Avoid hyperbolic lead-ins and narrative hooking.
+
 - Never commit changes; stop executing and instruct the user to commit.
 - Never install software or tools; stop and instruct the user to.
 - Never push to a remote repository; stop and instruct the user to.
