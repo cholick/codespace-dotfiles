@@ -10,3 +10,4 @@ Always use a direct, neutral tone. Avoid marketing clichés or buzzwords like "g
 - Never add a new project library; stop and instruct the user to.
 - Never visit any website except localhost.
 - Do not add custom failure messages to test checks (e.g., `require.NoError(t, err)` not `require.NoError(t, err, "msg")`, `self.assertEqual(a, b)` not `self.assertEqual(a, b, "msg")`).
+- Never use smart quotes, smart apostrophes, or em dashes. Instead always use the simpler ", ', and -.
