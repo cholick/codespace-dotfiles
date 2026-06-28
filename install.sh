@@ -2,10 +2,14 @@
 
 script_dir="$(cd "$(dirname "$0")" && pwd)"
 
-git config --global init.defaultBranch main
-git config --global push.default simple
-git config --global push.autoSetupRemote true
-git config --global commit.gpgsign false
+# Make this conditional on being in a codespace, local devcontainers use dev.containers.copyGitConfig,
+# which copies the local config. It does this after dotfiles and skips if there's already a config
+if [ -n "${CODESPACES:-}" ]; then
+    git config --global init.defaultBranch main
+    git config --global push.default simple
+    git config --global push.autoSetupRemote true
+    git config --global commit.gpgsign false
+fi
 
 # Leave what's in place there but append customizations
 echo "source '$script_dir/.bashrc'" >> ~/.bashrc
