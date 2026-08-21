@@ -11,3 +11,4 @@ Always use a direct, neutral tone. Avoid marketing clichés or buzzwords like "g
 - Never add skip conditions to newly created or modified tests. Missing test prerequisites must cause the test suite to fail.
 - Do not add custom failure messages to test checks (e.g., `require.NoError(t, err)` not `require.NoError(t, err, "msg")`, `self.assertEqual(a, b)` not `self.assertEqual(a, b, "msg")`).
 - Never use smart quotes, smart apostrophes, or em dashes. Instead always use the simpler ", ', and -.
+- When writing a link to a GitHub issue or PR in markdown, use the bare link instead of [friendly link text](https://www.github.com/xxx). GitHub automatically cleans up bare urls.
