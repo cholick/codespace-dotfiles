@@ -14,11 +14,10 @@ fi
 # Leave what's in place there but append customizations
 echo "source '$script_dir/.bashrc'" >> ~/.bashrc
 
-# You'd think I could just provide text, but github.copilot.chat.codeGeneration.instructions is deprecated
-# Works together with setting:
-#   "chat.instructionsFilesLocations": {"~/.github/copilot-instructions": true},
-mkdir -p ~/.github/copilot-instructions
-cp "$script_dir"/*.instructions.md ~/.github/copilot-instructions/ 2>/dev/null
+# You'd think I could just provide text, but they deprecated that. This is a moving target
+# and keeps breaking, reminder to periodically check sentinel instruction
+mkdir -p "$HOME/.copilot/instructions"
+cp "$script_dir"/*.instructions.md "$HOME/.copilot/instructions/"
 
 # Add remote settings for things that can't be set locally
 remote_settings_file="$HOME/.vscode-remote/data/Machine/settings.json"
