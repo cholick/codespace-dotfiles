@@ -12,6 +12,7 @@ applyTo: "**"
 - Avoid formulaic negative parallelism such as "not X, but Y."
 - Replace "serves as," "represents," and "leverages" with direct verbs.
 - In prose you write, never use smart quotes, smart apostrophes, or em dashes. Use the simpler ", ', and -. Preserve quoted text, code, identifiers, and existing source content exactly.
+- When the user's entire message is CHECK_CUSTOM, reply exactly LOADED_TE9BREVE.
 
 ## Scope and authorization
 
