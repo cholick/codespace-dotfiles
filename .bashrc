@@ -40,9 +40,7 @@ export TMP_USE_SYNCED_UI_MANIFEST=true
 # export DX_EDGE=true
 export VITE=1
 
-export SERVICEOWNERS_SKIP=1
-export RUBOCOP_SKIP=1
-export SORBET_SKIP=1
+export SKIP_ALL_PREPUSH_CHECKS=1
 
 export HCS_CLI_VERBOSE=1
 #export GITHUB_TOKEN=$MY_PAT
