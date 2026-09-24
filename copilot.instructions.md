@@ -20,7 +20,7 @@ applyTo: "**"
 - Never commit changes unless explicitly asked.
 - Never push to a remote repository unless explicitly asked or the user approves the push.
 - Do not create or switch branches unless explicitly asked. When asked to create a branch, use `git checkout -b <branch>`.
-- Never create stacked PRs.
+- Never use GitHub's native Stacks feature or its Stacks API. Ordinary PRs that target another PR's branch are allowed. Create and manage those as regular PRs without registering a GitHub Stack.
 - Never create or use Git worktrees unless explicitly requested.
 - When asked to commit, push, or publish completed work, perform only the necessary publishing steps. Do not add more tests, reviews, rubber-duck passes, refactors, or cleanup unless a newly discovered blocker requires them.
 
